@@ -9,12 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupViews()
     }
-
-
+    
+    func setupViews(){
+        let titleLabel = UILabel()
+        titleLabel.text = "Stack View Example"
+        view.addSubview(titleLabel)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30).isActive = true
+        titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    }
+    
 }
 
